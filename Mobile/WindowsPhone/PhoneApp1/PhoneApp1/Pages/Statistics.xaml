@@ -15,17 +15,17 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Transparent" Loaded="LayoutRoot_Loaded">
         <!--Pivot Control-->
         <phone:Pivot Title="Donator">
             <!--Pivot item one-->
             <phone:PivotItem Header="All">
                 <Grid>
                     <chart:PieChart  
-                         x:Name="PieChart" 
-                         Height="300" Width="400" 
-                         TitleMemberPath="Title" 
-                         ValueMemberPath="Value" 
+                         x:Name="PieChart"
+                         Height="300" Width="400"
+                         TitleMemberPath="title"
+                         ValueMemberPath="value"
                          Background="Transparent">
                     </chart:PieChart>
                 </Grid>
@@ -37,5 +37,5 @@
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>
-    
+
 </phone:PhoneApplicationPage>
