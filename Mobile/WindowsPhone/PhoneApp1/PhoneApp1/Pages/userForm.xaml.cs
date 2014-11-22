@@ -41,7 +41,7 @@ namespace PhoneApp1
                 var response = await client.PostAsync("http://188.226.168.226/api/register.php", content);
                 var responseString = await response.Content.ReadAsStreamAsync();
 
-                MessageBox.Show(responseString.ToString());
+                
             }
             else
             {
