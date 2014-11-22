@@ -20,7 +20,7 @@ namespace PhoneApp1
         private void BuildLocalizedApplicationBar()
         {
             ApplicationBar = new ApplicationBar();
-            ApplicationBarIconButton shareBtn = new ApplicationBarIconButton(new Uri("/Assets/Icons/camera.png", UriKind.Relative));
+            ApplicationBarIconButton shareBtn = new ApplicationBarIconButton(new Uri("/Assets/Icons/Check.png", UriKind.Relative));
             shareBtn.Text = "share";
             shareBtn.Click += shareClick;
             ApplicationBar.Buttons.Add(shareBtn);

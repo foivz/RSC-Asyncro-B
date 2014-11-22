@@ -16,6 +16,12 @@ namespace PhoneApp1
         public Statistics()
         {
             InitializeComponent();
+            postaviGrafove();
+        }
+
+        public void postaviGrafove()
+        {
+
         }
 
         public ObservableCollection<PData> Data = new ObservableCollection<PData>()
