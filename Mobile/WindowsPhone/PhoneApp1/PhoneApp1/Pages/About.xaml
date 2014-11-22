@@ -22,14 +22,13 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Donator" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="about" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock x:Name="nazivApp" Text="MyApplication" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Margin="10,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="319">
-            </TextBlock>
+            <Image x:Name="logo" Source="/Assets/Icons/bloodlogo100x100.png" Margin="0,0,22,521"/>
             <TextBlock x:Name="Naziv" Text="Asyncroβ" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeLarge}" Margin="10,86,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="319">
             </TextBlock>
             <TextBlock x:Name="clanovi" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Margin="37,134,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="319">
@@ -43,6 +42,14 @@
             </TextBlock>
             <TextBlock x:Name="clanovi4" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Margin="37,251,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="319">
                 <Run Text="Dragutin Dumic"/>
+            </TextBlock>
+            <Image x:Name="Asseco" Source="/Assets/Icons/circuloa_64x64.png" Margin="74,365,301,158"/>
+            <Image x:Name="FOI" Source="/Assets/Icons/FOI-logo_medium.png" Margin="299,365,76,158"/>
+            <TextBlock x:Name="assecoInfo" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Margin="20,454,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" TextAlignment="Center">
+                <Run Text="Asseco SEE"/>
+            </TextBlock>
+            <TextBlock x:Name="FOIInfo" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Margin="245,454,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" TextAlignment="Center">
+                <Run Text="FOI"/>
             </TextBlock>
 
         </Grid>

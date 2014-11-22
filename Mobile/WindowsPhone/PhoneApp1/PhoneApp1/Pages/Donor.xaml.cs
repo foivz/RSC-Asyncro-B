@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Windows.Devices.Geolocation;
 
 namespace PhoneApp1
 {
@@ -17,19 +18,29 @@ namespace PhoneApp1
             InitializeComponent();
             postaviSucelje();
         }
-        private void postaviSucelje()
+        private async void postaviSucelje()
         {
             List<donorControl> donori = new List<donorControl>();
-            for (int i = 0; i < 4; i++)
+            if (Settings.locationUsage == true)
             {
-                donorControl d = new donorControl();
-                d.adresa.Text = "testna adresa";
-                d.stanjeKrvi.Text = i.ToString();
-                donori.Add(d);
+                Geolocator geo = new Geolocator();
+                Geoposition geoposition = await geo.GetGeopositionAsync(maximumAge: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromSeconds(10));
+                string lat = geoposition.Coordinate.Latitude.ToString();
+                string lon = geoposition.Coordinate.Longitude.ToString();
             }
-            foreach (donorControl don in donori)
+            else
             {
-                stackPanel.Children.Add(don);
+                for (int i = 0; i < 4; i++)
+                {
+                    donorControl d = new donorControl();
+                    d.adresa.Text = "testna adresa";
+                    d.stanjeKrvi.Text = i.ToString();
+                    donori.Add(d);
+                }
+                foreach (donorControl don in donori)
+                {
+                    stackPanel.Children.Add(don);
+                }
             }
         }
 

@@ -30,7 +30,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <toolkit:ToggleSwitch x:Name="locationCheckBox" Content="Allow push notifications" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
+            <toolkit:ToggleSwitch x:Name="pushNotification" Content="Allow push notifications" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
             <toolkit:ToggleSwitch x:Name="alarmCheckBox" Content="Use alarm messaging" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
             <toolkit:ToggleSwitch x:Name="location" Content="Allow location usage" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
             

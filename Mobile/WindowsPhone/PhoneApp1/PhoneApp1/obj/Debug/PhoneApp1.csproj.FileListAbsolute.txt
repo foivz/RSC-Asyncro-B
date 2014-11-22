@@ -176,3 +176,7 @@ C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\ob
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\Pages\Achievements.g.cs
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\Pages\Share.g.cs
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\Pages\Statistics.g.cs
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\Hammock.WindowsPhone.dll
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\ICSharpCode.SharpZipLib.WindowsPhone.dll
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\Hammock.WindowsPhone.pdb
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\ICSharpCode.SharpZipLib.WindowsPhone.pdb
