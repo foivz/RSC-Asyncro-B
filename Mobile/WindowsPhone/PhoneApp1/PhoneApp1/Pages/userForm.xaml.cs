@@ -32,14 +32,15 @@ namespace PhoneApp1
             {
                 HttpClient client = new HttpClient();
                 var values = new List<KeyValuePair<string, string>>();
-                values.Add(new KeyValuePair<string, string>("username", naziv.Text));
-                values.Add(new KeyValuePair<string, string>("password", prezime.Text));
-                values.Add(new KeyValuePair<string, string>("email", korIme.Text));
-                values.Add(new KeyValuePair<string, string>("name", lozinka.Password));
-                values.Add(new KeyValuePair<string, string>("surname", mail.Text));
+                values.Add(new KeyValuePair<string, string>("username", korIme.Text));
+                values.Add(new KeyValuePair<string, string>("password", lozinka.Password));
+                values.Add(new KeyValuePair<string, string>("email", mail.Text));
+                values.Add(new KeyValuePair<string, string>("name", naziv.Text));
+                values.Add(new KeyValuePair<string, string>("surname", prezime.Text));
                 var content = new FormUrlEncodedContent(values);
                 var response = await client.PostAsync("http://188.226.168.226/api/register.php", content);
-                var responseString = await response.Content.ReadAsStreamAsync();
+                var responseString = await response.Content.ReadAsStringAsync();
+                MessageBox.Show(responseString);
 
                 
             }
