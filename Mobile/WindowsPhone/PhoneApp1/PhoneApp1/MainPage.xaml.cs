@@ -58,30 +58,34 @@ namespace PhoneApp1
             if (NetworkInterface.GetIsNetworkAvailable())
             {
                 SetProgress(true);
-                //
-                /*HttpClient client = new HttpClient();
-                string baseString = "";
-                LoginForm form = new LoginForm();
-                form.username = usrname.Text;
-                form.password = pswd.Password;
-                var jsonSer = JsonConvert.SerializeObject(form);
-                var response = await client.PostAsync(baseString, new StringContent(jsonSer, Encoding.UTF8, "application/json"));
-                string content = await response.Content.ReadAsStringAsync();
-                if (response.StatusCode.ToString() == "OK")
+                if (usrname.Text == "" || pswd.Password == "")
                 {
-                    MessageBox.Show("Tribalo bi biti ok");
-                    accountInfo account = new accountInfo();
-                    account.Username = usrname.Text;
+                    MessageBox.Show("Please eneter username and password!");
                 }
                 else
                 {
-                    MessageBox.Show("Error: " + response.StatusCode.ToString());
+                    /*HttpClient client = new HttpClient();
+                    string baseString = "";
+                    LoginForm form = new LoginForm();
+                    form.username = usrname.Text;
+                    form.password = pswd.Password;
+                    var jsonSer = JsonConvert.SerializeObject(form);
+                    var response = await client.PostAsync(baseString, new StringContent(jsonSer, Encoding.UTF8, "application/json"));
+                    string content = await response.Content.ReadAsStringAsync();
+                    if (response.StatusCode.ToString() == "OK")
+                    {
+                        MessageBox.Show("Tribalo bi biti ok");
+                        accountInfo account = new accountInfo();
+                        account.Username = usrname.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: " + response.StatusCode.ToString());
+                    }
+                    SetProgress(false);*/
+                    NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
                 }
-                //
-                //
-                */
-                SetProgress(false);
-                NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
+                SetProgress(true);
             }
             else
             {

@@ -28,10 +28,24 @@ namespace PhoneApp1
             ApplicationBarMenuItem settingsBtn = new ApplicationBarMenuItem("Settings");
             settingsBtn.Click += settingsPage;
             ApplicationBar.MenuItems.Add(settingsBtn);
+            ApplicationBarMenuItem logoutBtn = new ApplicationBarMenuItem("logout");
+            logoutBtn.Click += logout;
+            ApplicationBar.MenuItems.Add(logoutBtn);
         }
         private void settingsPage(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/Pages/Settings.xaml", UriKind.Relative));
+        }
+        private void logout(object sender, EventArgs e)
+        {
+            accountInfo a = new accountInfo();
+            a.Username = "";
+            a.Id = -1;
+            a.Name = "";
+            a.Password = "";
+            a.Status = -1;
+            a.Surname = "";
+            a.Type = -1;
         }
         private void postaviSucelje()
         {
@@ -79,33 +93,31 @@ namespace PhoneApp1
         }
         private void GridTap(Grid grid)
         {
-            //trebam dobiti sto je korisnik kliknia
             TextBlock LevelName = (TextBlock)grid.Children[0];
             string ime = LevelName.Text;
-            //korisnik
             if (String.Compare("Personal data", ime) == 0)
             {
-                NavigationService.Navigate(new Uri("/userForm.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/Pages/userForm.xaml", UriKind.Relative));
             }
             else if (String.Compare("Achievements", ime) == 0)
             {
-
+                NavigationService.Navigate(new Uri("/Pages/Achievements.xaml", UriKind.Relative));
             }
             else if (String.Compare("Donor info", ime) == 0)
             {
-                //NavigationService.Navigate(new Uri("/searchModule.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/Pages/Donor.xaml", UriKind.Relative));
             }
             else if (String.Compare("Statistics", ime) == 0)
             {
-                //NavigationService.Navigate(new Uri("/kosara.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/Pages/Statistics.xaml", UriKind.Relative));
             }
             else if (String.Compare("Share", ime) == 0)
             {
-
+                NavigationService.Navigate(new Uri("/Pages/Share.xaml", UriKind.Relative));
             }
             else if (String.Compare("About", ime) == 0)
             {
-
+                NavigationService.Navigate(new Uri("/Pages/About.xaml", UriKind.Relative));
             }
         }
     }

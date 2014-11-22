@@ -91,6 +91,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="accountInfo.cs" />
+    <Compile Include="achievementClass.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -99,6 +100,15 @@
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Achievements.xaml.cs">
+      <DependentUpon>Achievements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Donor.xaml.cs">
+      <DependentUpon>Donor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\forgotPassword.xaml.cs">
       <DependentUpon>forgotPassword.xaml</DependentUpon>
@@ -109,6 +119,12 @@
     <Compile Include="Pages\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Share.xaml.cs">
+      <DependentUpon>Share.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Statistics.xaml.cs">
+      <DependentUpon>Statistics.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\userForm.xaml.cs">
       <DependentUpon>userForm.xaml</DependentUpon>
     </Compile>
@@ -117,6 +133,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\donorControl.xaml.cs">
+      <DependentUpon>donorControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\twoLevelControl.xaml.cs">
       <DependentUpon>twoLevelControl.xaml</DependentUpon>
@@ -128,6 +147,18 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Achievements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Donor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,7 +174,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Share.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Statistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\userForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\donorControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +211,8 @@
     <Content Include="Assets\Icons\Check.png" />
     <Content Include="Assets\Icons\Data-Settings.png" />
     <Content Include="Assets\Icons\Dialog-Box-About.png" />
+    <Content Include="Assets\Icons\Favorites.png" />
+    <Content Include="Assets\Icons\FavoritesStar.png" />
     <Content Include="Assets\Icons\Graph-02.png" />
     <Content Include="Assets\Icons\Heart-ECG.png" />
     <Content Include="Assets\Icons\Share-03.png" />

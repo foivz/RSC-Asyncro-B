@@ -1,13 +1,11 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="PhoneApp1.Settings"
+    x:Class="PhoneApp1.Achievements"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
-    xmlns:control1="clr-namespace:CS.Windows.Controls;assembly=CS.Windows.Controls"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -25,15 +23,17 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="achievements" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <toolkit:ToggleSwitch x:Name="locationCheckBox" Content="Allow push notifications" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
-            <toolkit:ToggleSwitch x:Name="alarmCheckBox" Content="Use alarm messaging" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
-            <toolkit:ToggleSwitch x:Name="location" Content="Allow location usage" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
-            
+            <TextBlock x:Name="nazivKorisnika" Text="probniTeks" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="436"/>
+            <Image x:Name="star1" Source="/Assets/Icons/Favorites.png" Margin="10,49,394,507"/>
+            <Image x:Name="star2" Source="/Assets/Icons/Favorites.png" Margin="62,49,342,507"/>
+            <Image x:Name="star3" Source="/Assets/Icons/Favorites.png" Margin="114,49,290,507"/>
+            <Image x:Name="star4" Source="/Assets/Icons/Favorites.png" Margin="166,49,238,507"/>
+            <Image x:Name="star5" Source="/Assets/Icons/Favorites.png" Margin="218,49,186,507"/>
         </Grid>
     </Grid>
 
