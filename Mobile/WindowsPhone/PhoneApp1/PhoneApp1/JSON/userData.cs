@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace PhoneApp1
 {
-    class userData
+    public class userData
     {
-        
+        public string Name { get; set; }
+        public string Surname { get; set; }
     }
 }

@@ -49,7 +49,7 @@ namespace PhoneApp1
         }
         private void postaviSucelje()
         {
-            imePrezime.Text = accountInfo.Username;
+            imePrezime.Text = accountInfo.Name + " " + accountInfo.Surname;
             string[] imena = { "Personal data", "Achievements" ,"Donor info", "Statistics", "Share","About" };
             string[] slike = { "/Assets/Icons/Data-Settings.png", "/Assets/Icons/Certificate-01.png", "/Assets/Icons/Heart-ECG.png", "/Assets/Icons/Graph-02.png", "/Assets/Icons/Share-03.png", "/Assets/Icons/Dialog-Box-About.png" };
 

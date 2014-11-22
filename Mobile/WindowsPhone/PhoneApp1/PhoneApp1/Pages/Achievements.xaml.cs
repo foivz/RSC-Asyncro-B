@@ -20,7 +20,7 @@ namespace PhoneApp1
         }
         private void postaviSucelje()
         {
-            nazivKorisnika.Text = accountInfo.Username;
+            nazivKorisnika.Text = accountInfo.Name + " " + accountInfo.Surname;
             
             if (accountInfo.Username!= "")
             {

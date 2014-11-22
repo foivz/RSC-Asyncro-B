@@ -12,6 +12,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
 using Microsoft.Phone.Net.NetworkInformation;
+using System.Runtime.Serialization.Json;
 
 namespace PhoneApp1
 {
@@ -65,17 +66,27 @@ namespace PhoneApp1
                 else
                 {
                     HttpClient client = new HttpClient();
-                    string baseString = "http://arka.foi.hr/~ddumic/air.php";
-                    LoginForm form = new LoginForm();
-                    form.username = usrname.Text;
-                    form.password = pswd.Password;
-                    var jsonSer = JsonConvert.SerializeObject(form);
-                    var response = await client.PostAsync(baseString, new StringContent(jsonSer, Encoding.UTF8, "application/json"));
-                    string content = await response.Content.ReadAsStringAsync();
+                    string baseString = "http://188.226.168.226/api/login.php";
+                    LoginForm login = new LoginForm();
+                    login.password = pswd.Password;
+                    login.username = usrname.Text;
+                    var jsonSer = JsonConvert.SerializeObject(login);
+                    var response = await client.PostAsync(baseString, new StringContent(jsonSer,Encoding.UTF8,"aplication/json"));
                     if (response.StatusCode.ToString() == "OK")
                     {
-                        accountInfo.Username = usrname.Text;
-                        NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
+                        if (response.Content.ReadAsStringAsync().Result == "0")
+                        {
+                            MessageBox.Show("User does not exist");
+                        }
+                        else
+                        {
+                            userData res = JsonConvert.DeserializeObject<userData>(response.Content.ReadAsStringAsync().Result);
+                            accountInfo.Name = res.Name;
+                            accountInfo.Surname = res.Surname;
+                            accountInfo.Surname = res.Surname;
+                            accountInfo.Name = res.Name;
+                            NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
+                        }
                     }
                     else
                     {

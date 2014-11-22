@@ -15,6 +15,12 @@ namespace PhoneApp1
         public Statistics()
         {
             InitializeComponent();
+            postaviGrafove();
+        }
+
+        public void postaviGrafove()
+        {
+
         }
     }
 }
