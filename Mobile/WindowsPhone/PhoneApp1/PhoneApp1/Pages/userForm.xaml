@@ -35,6 +35,7 @@
             <control1:WatermarkTextBox x:Name="status" VerticalAlignment="Center" Visibility="Collapsed"/>
             <control1:WatermarkTextBox x:Name="Id" VerticalAlignment="Center" Visibility="Collapsed"/>
             <control1:WatermarkTextBox x:Name="tip" VerticalAlignment="Center" Visibility="Collapsed"/>
+            <control1:WatermarkTextBox x:Name="mail" VerticalAlignment="Center" WatermarkText="e-mail"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->

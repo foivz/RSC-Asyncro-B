@@ -66,12 +66,13 @@ namespace PhoneApp1
                 else
                 {
                     HttpClient client = new HttpClient();
-                    string baseString = "http://188.226.168.226/api/login.php";
-                    LoginForm login = new LoginForm();
-                    login.password = pswd.Password;
-                    login.username = usrname.Text;
-                    var jsonSer = JsonConvert.SerializeObject(login);
-                    var response = await client.PostAsync(baseString, new StringContent(jsonSer,Encoding.UTF8,"aplication/json"));
+                    var values = new List<KeyValuePair<string, string>>();
+                    values.Add(new KeyValuePair<string, string>("username", usrname.Text));
+                    values.Add(new KeyValuePair<string, string>("password", pswd.Password));
+                    var content = new FormUrlEncodedContent(values);
+                    var response = await client.PostAsync("http://188.226.168.226/api/login.php", content);
+                    var responseString = await response.Content.ReadAsStreamAsync();
+
                     if (response.StatusCode.ToString() == "OK")
                     {
                         if (response.Content.ReadAsStringAsync().Result == "0")
@@ -80,11 +81,11 @@ namespace PhoneApp1
                         }
                         else
                         {
+                            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(userData));
+                            //userData odgovor = (userData)serializer.ReadObject(responseString);
                             userData res = JsonConvert.DeserializeObject<userData>(response.Content.ReadAsStringAsync().Result);
-                            accountInfo.Name = res.Name;
-                            accountInfo.Surname = res.Surname;
-                            accountInfo.Surname = res.Surname;
-                            accountInfo.Name = res.Name;
+                            accountInfo.Name = res.name;
+                            accountInfo.Surname = res.surname;
                             NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
                         }
                     }
