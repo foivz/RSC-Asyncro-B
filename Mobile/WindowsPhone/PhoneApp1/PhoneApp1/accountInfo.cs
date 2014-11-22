@@ -8,12 +8,12 @@ namespace PhoneApp1
 {
     public class accountInfo
     {
-        public string Username;
-        public string Password;
-        public string Name;
-        public string Surname;
-        public int Type;
-        public int Status;
-        public int Id;
+        public static string Username;
+        public static string Password;
+        public static string Name;
+        public static string Surname;
+        public static int Type;
+        public static int Status;
+        public static int Id;
     }
 }

@@ -134,6 +134,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Share\Twitter.cs" />
     <Compile Include="UserControls\donorControl.xaml.cs">
       <DependentUpon>donorControl.xaml</DependentUpon>
     </Compile>

@@ -38,17 +38,18 @@ namespace PhoneApp1
         }
         private void logout(object sender, EventArgs e)
         {
-            accountInfo a = new accountInfo();
-            a.Username = "";
-            a.Id = -1;
-            a.Name = "";
-            a.Password = "";
-            a.Status = -1;
-            a.Surname = "";
-            a.Type = -1;
+            accountInfo.Username = "";
+            accountInfo.Id = -1;
+            accountInfo.Name = "";
+            accountInfo.Password = "";
+            accountInfo.Status = -1;
+            accountInfo.Surname = "";
+            accountInfo.Type = -1;
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
         private void postaviSucelje()
         {
+            imePrezime.Text = accountInfo.Username;
             string[] imena = { "Personal data", "Achievements" ,"Donor info", "Statistics", "Share","About" };
             string[] slike = { "/Assets/Icons/Data-Settings.png", "/Assets/Icons/Certificate-01.png", "/Assets/Icons/Heart-ECG.png", "/Assets/Icons/Graph-02.png", "/Assets/Icons/Share-03.png", "/Assets/Icons/Dialog-Box-About.png" };
 

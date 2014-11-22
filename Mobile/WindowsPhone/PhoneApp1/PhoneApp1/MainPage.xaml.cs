@@ -64,8 +64,8 @@ namespace PhoneApp1
                 }
                 else
                 {
-                    /*HttpClient client = new HttpClient();
-                    string baseString = "";
+                    HttpClient client = new HttpClient();
+                    string baseString = "http://arka.foi.hr/~ddumic/air.php";
                     LoginForm form = new LoginForm();
                     form.username = usrname.Text;
                     form.password = pswd.Password;
@@ -74,16 +74,15 @@ namespace PhoneApp1
                     string content = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode.ToString() == "OK")
                     {
-                        MessageBox.Show("Tribalo bi biti ok");
-                        accountInfo account = new accountInfo();
-                        account.Username = usrname.Text;
+                        accountInfo.Username = usrname.Text;
+                        NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
                     }
                     else
                     {
                         MessageBox.Show("Error: " + response.StatusCode.ToString());
                     }
-                    SetProgress(false);*/
-                    NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
+                    SetProgress(false);
+                    
                 }
                 SetProgress(true);
             }

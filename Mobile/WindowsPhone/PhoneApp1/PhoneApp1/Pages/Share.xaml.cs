@@ -27,7 +27,14 @@ namespace PhoneApp1
         }
         private void shareClick(object sender, EventArgs e)
         {
-            
+            if (facebook.IsChecked == true)
+            {
+                
+            }
+            if (twitter.IsChecked == true)
+            {
+                
+            }
         }
     }
 

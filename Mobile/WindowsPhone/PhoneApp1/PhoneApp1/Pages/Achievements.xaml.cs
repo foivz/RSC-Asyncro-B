@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 
 namespace PhoneApp1
 {
@@ -19,10 +20,10 @@ namespace PhoneApp1
         }
         private void postaviSucelje()
         {
-            accountInfo a = new accountInfo();
-            if (a.Username != "")
+            nazivKorisnika.Text = accountInfo.Username;
+            
+            if (accountInfo.Username!= "")
             {
-                nazivKorisnika.Text = a.Username;
                 
             }
         }
