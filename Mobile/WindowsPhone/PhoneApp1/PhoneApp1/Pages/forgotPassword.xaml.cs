@@ -41,6 +41,7 @@ namespace PhoneApp1.Pages
             if (response.StatusCode.ToString() == "OK")
             {
                 MessageBox.Show("New password was sent to your mail");
+                
             }
             else
             {
