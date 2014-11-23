@@ -36,6 +36,8 @@
             <control1:WatermarkTextBox x:Name="Id" VerticalAlignment="Center" Visibility="Collapsed"/>
             <control1:WatermarkTextBox x:Name="tip" VerticalAlignment="Center" Visibility="Collapsed"/>
             <control1:WatermarkTextBox x:Name="mail" VerticalAlignment="Center" WatermarkText="e-mail"/>
+            <control1:WatermarkTextBox x:Name="bloodGroup" VerticalAlignment="Center" WatermarkText="Blood group e.g. A+"/>
+
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->

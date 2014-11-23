@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="JSON\achievements.cs" />
     <Compile Include="JSON\donorJSON.cs" />
+    <Compile Include="JSON\krvaGrupaJSON.cs" />
     <Compile Include="JSON\LoginForm.cs" />
     <Compile Include="JSON\userData.cs" />
     <Compile Include="LocalizedStrings.cs" />
