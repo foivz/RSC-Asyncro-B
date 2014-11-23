@@ -33,7 +33,18 @@
 
             <!--Pivot item two-->
             <phone:PivotItem Header="History">
-                <Grid/>
+                <Grid>
+                    <chart:SerialChart x:Name="LineChart" 
+                    Height="300" 
+                    Width="400" 
+                    CategoryValueMemberPath="Category" 
+                    AxisForeground="White" 
+                    PlotAreaBackground="Black">
+                        <chart:SerialChart.Graphs>
+                            <chart:LineGraph Title="Moje donacije" ValueMemberPath="Line1" Brush="Red" StrokeThickness="5"/>
+                        </chart:SerialChart.Graphs>
+                    </chart:SerialChart>
+                </Grid>
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>

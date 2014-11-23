@@ -10,6 +10,9 @@ using Microsoft.Phone.Shell;
 
 namespace PhoneApp1
 {
+    using TweetSharp;
+
+    
     public partial class Share : PhoneApplicationPage
     {
         public Share()
@@ -32,8 +35,22 @@ namespace PhoneApp1
                 
             }
             if (twitter.IsChecked == true)
-            {
-                
+            {/*
+                Dispatcher dispatcher = Deployment.Current.Dispatcher;
+                TwitterService service = new TwitterService("consumerKey", "consumerSecret");
+                service.AuthenticateWith("accessToken", "accessTokenSecret");
+
+                service.SendTweet(new SendTweetOptions { Status = "Tweeting with #tweetsharp for #wp7" }, (tweet, response) =>
+                {
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        dispatcher.BeginInvoke(() => tweets.Items.Add(tweet));
+                    }
+                    else
+                    {
+                        throw new Exception(response.StatusCode.ToString());
+                    }
+                });*/
             }
         }
     }

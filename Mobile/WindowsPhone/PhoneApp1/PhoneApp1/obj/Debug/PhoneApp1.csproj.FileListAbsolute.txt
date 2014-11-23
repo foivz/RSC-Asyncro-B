@@ -280,3 +280,6 @@ C:\Users\Andro\Documents\GitHub\RSC-Asyncro-B\Mobile\WindowsPhone\PhoneApp1\Phon
 C:\Users\Andro\Documents\GitHub\RSC-Asyncro-B\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.dll
 C:\Users\Andro\Documents\GitHub\RSC-Asyncro-B\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.pdb
 C:\Users\Andro\Documents\GitHub\RSC-Asyncro-B\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\XapCacheFile.xml
+C:\Users\Andro\Documents\GitHub\RSC-Asyncro-B\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\PhoneApp1.dll.config
+C:\Users\Andro\Documents\GitHub\RSC-Asyncro-B\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\TweetSharp.WindowsPhone.dll
+C:\Users\Andro\Documents\GitHub\RSC-Asyncro-B\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\TweetSharp.WindowsPhone.pdb
