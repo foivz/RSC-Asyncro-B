@@ -99,3 +99,6 @@ C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\ob
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\hr-HR\PhoneApp1.resources.dll
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.Resources.AppResources.hr-HR.resources
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\hr-HR\PhoneApp1.resources.dll
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\PhoneApp1.csprojResolveAssemblyReference.cache
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\TweetSharp.WindowsPhone.dll
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\TweetSharp.WindowsPhone.pdb

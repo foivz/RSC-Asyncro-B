@@ -21,7 +21,7 @@
             <!--Pivot item one-->
             <phone:PivotItem Header="{Binding Path=LocalizedResources.All, Source={StaticResource LocalizedStrings}}">
                 <Grid>
-                    <chart:PieChart  
+                    <chart:PieChart 
                          x:Name="PieChart"
                          Height="300" Width="400"
                          TitleMemberPath="title"
@@ -32,10 +32,6 @@
             </phone:PivotItem>
 
             <!--Pivot item two-->
-<<<<<<< HEAD
-            <phone:PivotItem Header="{Binding Path=LocalizedResources.History, Source={StaticResource LocalizedStrings}}">
-                <Grid/>
-=======
             <phone:PivotItem Header="History">
                 <Grid>
                     <chart:SerialChart x:Name="LineChart" 
@@ -49,7 +45,6 @@
                         </chart:SerialChart.Graphs>
                     </chart:SerialChart>
                 </Grid>
->>>>>>> origin/master
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>

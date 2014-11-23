@@ -34,6 +34,7 @@
             <Image x:Name="star3" Source="/Assets/Icons/Favorites.png" Margin="114,49,290,507"/>
             <Image x:Name="star4" Source="/Assets/Icons/Favorites.png" Margin="166,49,238,507"/>
             <Image x:Name="star5" Source="/Assets/Icons/Favorites.png" Margin="218,49,186,507"/>
+            <TextBlock x:Name="Description" Margin="10,105,10,10"/>
         </Grid>
     </Grid>
 

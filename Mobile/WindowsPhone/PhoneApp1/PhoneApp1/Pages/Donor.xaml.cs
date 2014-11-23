@@ -36,21 +36,21 @@ namespace PhoneApp1
             //else
            // {
             HttpClient client = new HttpClient();
-            var values = new List<KeyValuePair<string, string>>();
-            var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync("http://188.226.168.226/api/institutions.php",content);
-            string responseString = await response.Content.ReadAsStringAsync();
-            
-            if (responseString != "")
+            var result = await client.GetAsync("http://188.226.168.226/api/institutions.php");
+            string content = await result.Content.ReadAsStringAsync();
+            if (content != "")
             {
-
-                List<donorJSON> data = JsonConvert.DeserializeObject<List<donorJSON>>(responseString);
+                List<donorJSON> data = JsonConvert.DeserializeObject<List<donorJSON>>(content);
                 for (int i = 0; i < data.Count; i++)
                 {
                     donorControl d = new donorControl();
-                    Uri uri = new Uri(data[i].picture, UriKind.Absolute);
-                    ImageSource imgSource = new BitmapImage(uri);
-                    d.slika.Source = imgSource; 
+                    if (data[i].picture != null)
+                    {
+                        Uri uri = new Uri(data[i].picture, UriKind.Absolute);
+                        ImageSource imgSource = new BitmapImage(uri);
+                        d.slika.Source = imgSource; 
+                    }
+                    
                     d.adress.Text = "Adress: " + data[i].adress;
                     d.capacity.Text = "Capacity: " + data[i].capacity;
                     d.username.Text = "Name: " + data[i].username;

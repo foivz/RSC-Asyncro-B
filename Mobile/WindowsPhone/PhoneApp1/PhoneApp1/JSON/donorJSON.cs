@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneApp1
 {
-    class donorJSON
+    public class donorJSON
     {
         public string username { get; set; }
         public string adress { get; set; }
