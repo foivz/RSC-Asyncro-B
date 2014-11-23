@@ -27,3 +27,4 @@
         new WOW().init();
     </script>
     <!--animated-css-->
+</head>
