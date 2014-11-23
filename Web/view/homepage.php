@@ -1,35 +1,7 @@
 
 <body>
 <!--- Header Starts Here --->
-<div class="header" id="home">
-    <div class="container">
-        <div class="logo">
-            <h1><a href="index.html">Blood Donations</a></h1>
-        </div>
-        <span class="menu"> </span>
-        <div class="cleare"> </div>
-        <script>
-            $( "span.menu" ).click(function() {
-                $( "ul.navig" ).slideToggle( "slow", function() {
-                    // Animation complete.
-                });
-            });
-        </script>
-        <div class="navigation">
-            <ul class="navig">
-                <li><a class="active" href="#home" class="scroll">HOME</a></li>
-                <li><a href="#about" class="scroll">ABOUT</a></li>
-                <li><a href="#services" class="scroll">SERVICES</a></li>
-                <li><a href="#project" class="scroll">PROJECTS</a></li>
-                <li><a href="#contact" class="scroll">CONTACT</a></li>
-                <li><a href="/registration.html" class="scroll">REGISTRATION</a></li>
-                <li><a href="login.html" >LOGIN</a></li>
-            </ul>
 
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div>
 <!--- Header Ends Here --->
 <!-- Banner Starts Here -->
 
@@ -39,20 +11,8 @@
             <div class="flexslider">
                 <ul class="slides">
                     <li>
-                        <h2>IPSUM DOLOR SIT AMET LAT</h2>
-                        <h5>Allquam tincidunt mauris cu risus</h5>
-                    </li>
-                    <li>
-                        <h2>IPSUM DOLOR SIT AMET LAT</h2>
-                        <h5>Allquam tincidunt mauris cu risus</h5>
-                    </li>
-                    <li>
-                        <h2>IPSUM DOLOR SIT AMET LAT</h2>
-                        <h5>Allquam tincidunt mauris cu risus</h5>
-                    </li>
-                    <li>
-                        <h2>IPSUM DOLOR SIT AMET LAT</h2>
-                        <h5>Allquam tincidunt mauris cu risus</h5>
+                        <h2>DONATE YOUR BLOOD</h2>
+                        <h5>save a life</h5>
                     </li>
                 </ul>
             </div>
@@ -106,8 +66,8 @@
                         <span class="cnt1"> </span>
                     </div>
                     <div class="content-right">
-                        <h3>CESTIBULUM AUCT</h3>
-                        <P>Praesent dapibus, neque id cursus fauci-bus, tortor neque egestas augue,euin vulputate magna eros lipsum</P>
+                        <h3>Institution administration</h3>
+                        <P>Administrate your institution, manage institution info.</P>
                         <a href="#">MORE</a>
                     </div>
                     <div class="clearfix"> </div>
@@ -119,8 +79,8 @@
                         <span class="cnt2"> </span>
                     </div>
                     <div class="content-right">
-                        <h3>VETAE  FACILLIS</h3>
-                        <P>Craesent dapibus, neque id cursus fauci-bus, tortor neque egestas augue,euin vulputate magna eros lipsum</P>
+                        <h3>Blood donation managment</h3>
+                        <P>Blood supply managment, browse donor profiles, view statistic. </P>
                         <a href="#">MORE</a>
                     </div>
                     <div class="clearfix"> </div>
@@ -132,8 +92,8 @@
                         <span class="cnt3"> </span>
                     </div>
                     <div class="content-right">
-                        <h3>INTEGRE FUSCE</h3>
-                        <P>Jraesent dapibus, neque id cursus fauci-bus, tortor neque egestas augue,euin vulputate magna eros lipsum</P>
+                        <h3>Localization support application</h3>
+                        <P>Multilingual application support </P>
                         <a href="#">MORE</a>
                     </div>
                     <div class="clearfix"> </div>
@@ -157,58 +117,7 @@
     </div>
 </div>
 
-<!--Responsive-tabs-Starts-Here-->
-<div class="responsive-tabs" id="project">
-    <div class="container">
-        <div class="tabs-box clock wow bounceIn">
-            <ul class="tabs-menu">
-                <li><a href="#tab1"><img src="view/rss/images/f.png" alt="">SED EGEST ASTEET</a></li>
-                <li><a href="#tab2"><img src="view/rss/images/d.png" alt="">MORBI INTERDUM</a></li>
-                <li><a href="#tab3"><img src="view/rss/images/u.png" alt="">MORBI INTERDUM</a></li>
-            </ul>
-            <div class="clearfix"> </div>
-            <div class="tab-grids">
-                <div id="tab1" class="tab-grid">
-                    <div class="col-md-6 line1">
-                        <img src="view/rss/images/hny.jpg" alt="">
-                        <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-                    </div>
-                    <div class="col-md-6 line2">
-                        <img src="view/rss/images/hny1.jpg" alt="">
-                        <p>Lorem egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper at felis lorem ipsum dolor.</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div id="tab2" class="tab-grid">
-                    <div class="col-md-6 line1">
-                        <img src="view/rss/images/cake.jpg" alt="">
-                        <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-                    </div>
-                    <div class="col-md-6 line2">
-                        <img src="view/rss/images/sandwich.jpg" alt="">
-                        <p>Lorem egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper at felis lorem ipsum dolor.</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div id="tab3" class="tab-grid">
-                    <div class="col-md-6 line1">
-                        <img src="view/rss/images/melt.jpg" alt="">
-                        <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-                    </div>
-                    <div class="col-md-6 line2">
-                        <img src="view/rss/images/beef.jpg" alt="">
-                        <p>Lorem egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper at felis lorem ipsum dolor.</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Script-->
-    <script src="view/rss/js/jquery-1.11.0.min.js"></script>
-    <script src="view/rss/js/myscript.js"> </script>
-    `		<!--Script-->
-</div>
+
 <!--Responsive-tabs-ends-Here-->
 <div class="contact" id="contact">
     <div class="container">
@@ -297,7 +206,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30912.73175219394!2d79.98639619999999!3d14.4218904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1410591500477" width="600" height="450" frameborder="0" style="border:0"> </iframe>
                 <h4>Address</h4>
                 <p>Building name, some street name, some city name, country</p>
-                <a href="mailto:info@example.com">info@sitename.com  /  (000)  888 888 8888</a>
+
             </div>
             <div class="clearfix"> </div>
         </div>

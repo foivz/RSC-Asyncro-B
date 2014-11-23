@@ -15,8 +15,17 @@ $db = new Database();
 
 
 if (isset($_POST['username'])){
+    $surname="";
+    if(isset($_POST['surname']))
+        $surname=$_POST['surname'];
+    $user = $db->query("UPDATE users SET password=?, email = ?, name = ?, surname = ? WHERE username = ? ", array($_POST['password'],$_POST['email'],$_POST['name'],$surname, $_POST['username']));
 
-    $user = $db->query("UPDATE users SET password=?, email = ?, name = ?, surname = ? WHERE username = ? ", array($_POST['password'],$_POST['email'],$_POST['name'],$_POST['surname'], $_POST['username']));
+    if(isset($_POST['submit']))
+        if($user)
+            header('location: ../admin_list.php');
+        else
+            header('location: ../error.php');
+
     if($user)
         echo 1;
     else
