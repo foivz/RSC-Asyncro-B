@@ -22,12 +22,34 @@ namespace PhoneApp1
         public MainPage()
         {
             InitializeComponent();
+            dohvatiNesto();
             accountInfo.Username = "";
             accountInfo.Name = "";
             accountInfo.Password = "";
             accountInfo.Surname = "";
             pushNotification notifikacije = new pushNotification();
             BuildLocalizedApplicationBar();
+        }
+        private async void dohvatiNesto()
+        {
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync("http://188.226.168.226/api/achivement.php/");
+            string content = await result.Content.ReadAsStringAsync();
+            List<achievements> data = JsonConvert.DeserializeObject<List<achievements>>(content);
+            int brojac = 0;
+            int suma = 0;
+            for (int i = 0; i < data.Count; i++)
+            {
+                if (data[i].username == accountInfo.Username)
+                {
+                    brojac = int.Parse(data[i].donations);
+                    suma += int.Parse(data[i].donations);
+                }
+                suma += int.Parse(data[i].donations);
+            }
+            Statistics.moje = brojac;
+            Statistics.ukupno = suma;
+            Statistics.ostalo = Statistics.ukupno - Statistics.moje;
         }
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {

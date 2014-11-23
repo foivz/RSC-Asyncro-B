@@ -21,31 +21,6 @@ namespace PhoneApp1
         public Statistics()
         {
             InitializeComponent();
-            postaviGrafove();
-        }
-
-        public async void postaviGrafove()
-        {
-            HttpClient client = new HttpClient();
-            var result = await client.GetAsync("http://188.226.168.226/api/achivement.php/");
-            string content = await result.Content.ReadAsStringAsync();
-            List<achievements> data = JsonConvert.DeserializeObject<List<achievements>>(content);
-            int brojac = 0;
-            int suma = 0;
-            for (int i = 0; i < data.Count; i++)
-            {
-                if (data[i].username == accountInfo.Username)
-                    brojac = int.Parse(data[i].donations);
-                suma += int.Parse(data[i].donations);
-            }
-            moje = brojac;
-            ukupno = suma;
-            ostalo = ukupno-moje;
-
-            PieChart.Visibility = Visibility.Visible;
-            PieChart.DataSource = Data;
-
-            LineChart.DataSource = lineData;
         }
 
         public ObservableCollection<PData> Data = new ObservableCollection<PData>()
@@ -56,8 +31,8 @@ namespace PhoneApp1
 
         public ObservableCollection<LineData> lineData = new ObservableCollection<LineData>()
         {
-            new LineData() { Category = "Moje donacije", Line1 = moje},
-            new LineData() { Category = "Ukupno donacija", Line1 = ostalo},
+            new LineData() { Category = "01.01.2014", Line1 = moje},
+            new LineData() { Category = "23.11.2014", Line1 = ostalo},
         };
 
         public class PData
@@ -68,8 +43,8 @@ namespace PhoneApp1
 
         private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
         {
-            //PieChart.DataSource = Data;
-            //LineChart.DataSource = lineData;
+            PieChart.DataSource = Data;
+            LineChart.DataSource = lineData;
         }
 
         public class LineData

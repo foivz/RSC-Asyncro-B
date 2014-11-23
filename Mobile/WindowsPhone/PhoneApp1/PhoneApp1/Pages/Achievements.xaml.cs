@@ -36,7 +36,7 @@ namespace PhoneApp1
             }
             if (brojac >= 15)
             {
-                Description.Text = "You are one of our top doners. Thanks!";
+                Description.Text = "You are one of our top doners!";
                 int rating = getRating(5);
                 BitmapImage bm = new BitmapImage(new Uri(@"/Assets/Icons/FavoritesStar.png", UriKind.RelativeOrAbsolute));
                 BitmapImage bm_star = new BitmapImage(new Uri(@"/Assets/Icons/Favorites.png", UriKind.RelativeOrAbsolute));
@@ -72,7 +72,7 @@ namespace PhoneApp1
             }
             if(brojac >= 3 && brojac < 5)
             {
-                Description.Text = "Now you have some experience. Come again and donate more!";
+                Description.Text = "Now you have some experience!";
                 int rating = getRating(2);
                 BitmapImage bm = new BitmapImage(new Uri(@"/Assets/Icons/FavoritesStar.png", UriKind.RelativeOrAbsolute));
                 BitmapImage bm_star = new BitmapImage(new Uri(@"/Assets/Icons/Favorites.png", UriKind.RelativeOrAbsolute));
@@ -84,7 +84,7 @@ namespace PhoneApp1
             }
             if (brojac > 0 && brojac < 3)
             {
-                Description.Text = "You have one donation! Keep it up!";
+                Description.Text = "You have one donation!";
                 int rating = getRating(1);
                 BitmapImage bm = new BitmapImage(new Uri(@"/Assets/Icons/FavoritesStar.png", UriKind.RelativeOrAbsolute));
                 BitmapImage bm_star = new BitmapImage(new Uri(@"/Assets/Icons/Favorites.png", UriKind.RelativeOrAbsolute));
@@ -96,7 +96,7 @@ namespace PhoneApp1
             }
             if (brojac == 0)
             {
-                Description.Text = "We are sorry that you didin't donate blood yet";
+                Description.Text = "You didin't donate blood yet";
                 int rating = getRating(0);
                 BitmapImage bm = new BitmapImage(new Uri(@"/Assets/Icons/FavoritesStar.png", UriKind.RelativeOrAbsolute));
                 BitmapImage bm_star = new BitmapImage(new Uri(@"/Assets/Icons/Favorites.png", UriKind.RelativeOrAbsolute));
