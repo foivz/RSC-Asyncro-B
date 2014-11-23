@@ -32,7 +32,13 @@ namespace PhoneApp1
             new PData() { title = "slice #4", value = 10 },
         };
 
-        
+        public ObservableCollection<LineData> lineData = new ObservableCollection<LineData>()
+        {
+            new LineData() { Category = "2010", Line1 = 1},
+            new LineData() { Category = "2011", Line1 = 3},
+            new LineData() { Category = "2012", Line1 = 1},
+            new LineData() { Category = "2013", Line1 = 2},
+        };
 
         public class PData
         {
@@ -43,6 +49,13 @@ namespace PhoneApp1
         private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
         {
             PieChart.DataSource = Data;
+            LineChart.DataSource = lineData;
+        }
+
+        public class LineData
+        {
+            public string Category { get; set; }
+            public double Line1 { get; set; }
         }
     }
 }
