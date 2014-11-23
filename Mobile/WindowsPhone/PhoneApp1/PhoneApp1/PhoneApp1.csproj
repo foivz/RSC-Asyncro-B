@@ -94,6 +94,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="institucija.cs" />
     <Compile Include="JSON\achievements.cs" />
     <Compile Include="JSON\donorJSON.cs" />
     <Compile Include="JSON\krvaGrupaJSON.cs" />
@@ -218,6 +219,7 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Icons\bloodlogo100x100 - Copy.png" />
     <Content Include="Assets\Icons\bloodlogo100x100.png" />
     <Content Include="Assets\Icons\Certificate-01.png" />
     <Content Include="Assets\Icons\Check.png" />

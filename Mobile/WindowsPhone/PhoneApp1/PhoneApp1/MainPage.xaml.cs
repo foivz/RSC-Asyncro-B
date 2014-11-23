@@ -93,6 +93,7 @@ namespace PhoneApp1
                             accountInfo.mail = res.email;
                             accountInfo.Password = res.password;
                             accountInfo.Username = res.username;
+                            accountInfo.id = res.id;
                             NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
                         }
                     }

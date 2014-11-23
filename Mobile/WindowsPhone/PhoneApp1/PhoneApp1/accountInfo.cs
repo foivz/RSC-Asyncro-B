@@ -13,5 +13,6 @@ namespace PhoneApp1
         public static string Name;
         public static string Surname;
         public static string mail;
+        public static int id;
     }
 }

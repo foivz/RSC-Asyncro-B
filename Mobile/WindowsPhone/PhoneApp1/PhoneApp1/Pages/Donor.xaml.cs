@@ -53,9 +53,9 @@ namespace PhoneApp1
                     
                     d.adress.Text = "Adress: " + data[i].adress;
                     d.capacity.Text = "Capacity: " + data[i].capacity;
-                    d.username.Text = "Name: " + data[i].username;
+                    d.username.Text = data[i].username;
                     d.stored.Text = "Stored: " + data[i].stored;
-                    d.Tap += gridTapped;
+                    d.LayoutRoot.Tap += gridTapped;
                     donori.Add(d);
                 }
                 foreach (donorControl don in donori)
@@ -66,9 +66,15 @@ namespace PhoneApp1
                 
            // }
         }
-
-        private void gridTapped(object sender, System.Windows.Input.GestureEventArgs e)
+        void gridTapped(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            gridTapped2((Grid)sender);
+        }
+        private void gridTapped2(Grid grid)
+        {
+            TextBlock LevelName = (TextBlock)grid.Children[1];
+            string ime = LevelName.Text;
+            institucija.institution = ime;
             NavigationService.Navigate(new Uri("/Pages/donation.xaml", UriKind.Relative));
         }
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)

@@ -4,8 +4,8 @@
   <Languages xmlns="">
     <Language code="hr-HR" />
   </Languages>
-  <App xmlns="" ProductID="{d05b7487-692f-4fa1-97c8-dde6a38d086e}" Title="PhoneApp1" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PhoneApp1 author" Description="Sample description" Publisher="PhoneApp1" PublisherID="{187f15e8-d520-4fe3-b571-22c79fb5c1ae}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{d05b7487-692f-4fa1-97c8-dde6a38d086e}" Title="Donator" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PhoneApp1 author" Description="Application that tracks donors and blood status" Publisher="PhoneApp1" PublisherID="{187f15e8-d520-4fe3-b571-22c79fb5c1ae}">
+    <IconPath IsRelative="true" IsResource="false">Assets\Icons\bloodlogo100x100.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
