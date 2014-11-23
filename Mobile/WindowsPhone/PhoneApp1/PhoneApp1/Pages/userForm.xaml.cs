@@ -44,50 +44,52 @@ namespace PhoneApp1
                 {
                     MessageBox.Show("Please fill all inputs");
                 }
-                if (bloodGroup.Text != "A+" || bloodGroup.Text != "A-" || bloodGroup.Text != "B+" || bloodGroup.Text != "B-" || bloodGroup.Text != "AB+" || bloodGroup.Text != "AB-" || bloodGroup.Text != "0+" || bloodGroup.Text != "0-")
-                {
-                    MessageBox.Show("Blood type does not exist!");
-                }
                 else
                 {
-                    HttpClient client = new HttpClient();
-                    SetProgress(true);
-                    int krvnaGrupa = 0;
-                    if (bloodGroup.Text != "A+") krvnaGrupa = 1;
-                    if (bloodGroup.Text != "A-") krvnaGrupa = 2;
-                    if (bloodGroup.Text != "B+") krvnaGrupa = 3;
-                    if (bloodGroup.Text != "B-") krvnaGrupa = 4;
-                    if (bloodGroup.Text != "AB+") krvnaGrupa = 5;
-                    if (bloodGroup.Text != "AB-") krvnaGrupa = 6;
-                    if (bloodGroup.Text != "0+") krvnaGrupa = 7;
-                    if (bloodGroup.Text != "0-") krvnaGrupa = 8;
-                    var values = new List<KeyValuePair<string, string>>();
-                    values.Add(new KeyValuePair<string, string>("username", korIme.Text));
-                    values.Add(new KeyValuePair<string, string>("password", lozinka.Password));
-                    values.Add(new KeyValuePair<string, string>("email", mail.Text));
-                    values.Add(new KeyValuePair<string, string>("name", naziv.Text));
-                    values.Add(new KeyValuePair<string, string>("surname", prezime.Text));
-                    values.Add(new KeyValuePair<string, string>("bloodType", krvnaGrupa.ToString()));
-                    var content = new FormUrlEncodedContent(values);
-                    var response = await client.PostAsync("http://188.226.168.226/api/update_user.php", content);
-                    var responseString = await response.Content.ReadAsStringAsync();
-
-                    if (responseString == "1")
+                    if (bloodGroup.Text == "A+" || bloodGroup.Text == "A-" || bloodGroup.Text == "B+" || bloodGroup.Text == "B-" || bloodGroup.Text == "AB+" || bloodGroup.Text == "AB-" || bloodGroup.Text == "0+" || bloodGroup.Text == "0-")
                     {
+                        HttpClient client = new HttpClient();
+                        SetProgress(true);
+                        int krvnaGrupa = 0;
+                        if (bloodGroup.Text == "A+") krvnaGrupa = 1;
+                        if (bloodGroup.Text == "A-") krvnaGrupa = 2;
+                        if (bloodGroup.Text == "B+") krvnaGrupa = 3;
+                        if (bloodGroup.Text == "B-") krvnaGrupa = 4;
+                        if (bloodGroup.Text == "AB+") krvnaGrupa = 5;
+                        if (bloodGroup.Text == "AB-") krvnaGrupa = 6;
+                        if (bloodGroup.Text == "0+") krvnaGrupa = 7;
+                        if (bloodGroup.Text == "0-") krvnaGrupa = 8;
+                        var values = new List<KeyValuePair<string, string>>();
+                        values.Add(new KeyValuePair<string, string>("username", korIme.Text));
+                        values.Add(new KeyValuePair<string, string>("password", lozinka.Password));
+                        values.Add(new KeyValuePair<string, string>("email", mail.Text));
+                        values.Add(new KeyValuePair<string, string>("name", naziv.Text));
+                        values.Add(new KeyValuePair<string, string>("surname", prezime.Text));
+                        values.Add(new KeyValuePair<string, string>("bloodType", krvnaGrupa.ToString()));
+                        var content = new FormUrlEncodedContent(values);
+                        var response = await client.PostAsync("http://188.226.168.226/api/update_user.php", content);
+                        var responseString = await response.Content.ReadAsStringAsync();
+
+                        if (responseString == "1")
+                        {
+                            SetProgress(false);
+                            MessageBox.Show("Updated successfully");
+                            SetProgress(false);
+                            NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
+                        }
+                        else
+                        {
+                            SetProgress(false);
+                            MessageBox.Show("Some error ccurred! Please try again");
+                            SetProgress(false);
+                        }
                         SetProgress(false);
-                        MessageBox.Show("Updated successfully");
-                        SetProgress(false);
-                        NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
                     }
                     else
                     {
-                        SetProgress(false);
-                        MessageBox.Show("Some error ccurred! Please try again");
-                        SetProgress(false);
+                        MessageBox.Show("Blood type does not exist!");
                     }
-                    SetProgress(false);
                 }
-
             }
             else
             {
@@ -98,23 +100,18 @@ namespace PhoneApp1
                         {
                             MessageBox.Show("Please fill all inputs");
                         }
-                        if (bloodGroup.Text != "A+" || bloodGroup.Text != "A-" || bloodGroup.Text != "B+" || bloodGroup.Text != "B-" || bloodGroup.Text != "AB+" || bloodGroup.Text != "AB-" || bloodGroup.Text != "0+" || bloodGroup.Text != "0-")
+                        if (bloodGroup.Text == "A+" || bloodGroup.Text == "A-" || bloodGroup.Text == "B+" || bloodGroup.Text == "B-" || bloodGroup.Text == "AB+" || bloodGroup.Text == "AB-" || bloodGroup.Text == "0+" || bloodGroup.Text == "0-")
                         {
-                            MessageBox.Show("Blood type does not exist!");
-                        }
-                        else
-                        {
-
-                            SetProgress(true);
+                             SetProgress(true);
                             int krvnaGrupa = 0;
-                            if (bloodGroup.Text != "A+") krvnaGrupa = 1;
-                            if (bloodGroup.Text != "A-") krvnaGrupa = 2;
-                            if (bloodGroup.Text != "B+") krvnaGrupa = 3;
-                            if (bloodGroup.Text != "B-") krvnaGrupa = 4;
-                            if (bloodGroup.Text != "AB+") krvnaGrupa = 5;
-                            if (bloodGroup.Text != "AB-") krvnaGrupa = 6;
-                            if (bloodGroup.Text != "0+") krvnaGrupa = 7;
-                            if (bloodGroup.Text != "0-") krvnaGrupa = 8;
+                            if (bloodGroup.Text == "A+") krvnaGrupa = 1;
+                            if (bloodGroup.Text == "A-") krvnaGrupa = 2;
+                            if (bloodGroup.Text == "B+") krvnaGrupa = 3;
+                            if (bloodGroup.Text == "B-") krvnaGrupa = 4;
+                            if (bloodGroup.Text == "AB+") krvnaGrupa = 5;
+                            if (bloodGroup.Text == "AB-") krvnaGrupa = 6;
+                            if (bloodGroup.Text == "0+") krvnaGrupa = 7;
+                            if (bloodGroup.Text == "0-") krvnaGrupa = 8;
                             HttpClient client = new HttpClient();
                             var values = new List<KeyValuePair<string, string>>();
                             values.Add(new KeyValuePair<string, string>("username", korIme.Text));
@@ -139,8 +136,14 @@ namespace PhoneApp1
                                 SetProgress(false);
                             }
                         }
+                        else
+                        {
+                             MessageBox.Show("Blood type does not exist!");
+                        }
+                           
+                        }
                 
-                    }
+                    
                 else
                 {
                     MessageBox.Show("Password do not mach!");

@@ -33,6 +33,7 @@
             <controls1:WatermarkTextBox x:Name="mail" VerticalAlignment="Center"/>
             <controls1:WatermarkTextBox x:Name="bldtype" VerticalAlignment="Center"/>
             <controls1:WatermarkTextBox x:Name="dateTime" VerticalAlignment="Center"/>
+            <controls1:WatermarkTextBox x:Name="ml" WatermarkText="ml of blod" VerticalAlignment="Center"/>
             <controls1:WatermarkTextBox x:Name="institution" VerticalAlignment="Center"/>
         </StackPanel>
     </Grid>

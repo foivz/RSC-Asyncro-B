@@ -40,25 +40,32 @@ namespace PhoneApp1
         }
         private async void arrangeDonating(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
-            var values = new List<KeyValuePair<string, string>>();
-            values.Add(new KeyValuePair<string, string>("username", usrnme.Text));
-            values.Add(new KeyValuePair<string, string>("email", mail.Text));
-            values.Add(new KeyValuePair<string, string>("blood_type", bldtype.Text));
-            values.Add(new KeyValuePair<string, string>("date", dateTime.Text));
-            values.Add(new KeyValuePair<string, string>("institution", institution.Text));
-            var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync("http://188.226.168.226/api/donate.php", content);
-            string responseString = await response.Content.ReadAsStringAsync();
-            if (responseString == "1")
+            if (ml.Text == "0")
             {
-                MessageBox.Show("Thanks for donating!");
+                MessageBox.Show("You have to eneter blood capacity");
             }
             else
             {
-                MessageBox.Show("Something went wrong. Please try again!");
+                HttpClient client = new HttpClient();
+                var values = new List<KeyValuePair<string, string>>();
+                values.Add(new KeyValuePair<string, string>("username", usrnme.Text));
+                values.Add(new KeyValuePair<string, string>("email", mail.Text));
+                values.Add(new KeyValuePair<string, string>("blood_type", bldtype.Text));
+                values.Add(new KeyValuePair<string, string>("date", dateTime.Text));
+                values.Add(new KeyValuePair<string, string>("blood", ml.Text));
+                values.Add(new KeyValuePair<string, string>("institution", institution.Text));
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync("http://188.226.168.226/api/donate.php", content);
+                string responseString = await response.Content.ReadAsStringAsync();
+                if (responseString == "1")
+                {
+                    MessageBox.Show("Thanks for donating!");
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong. Please try again!");
+                }
             }
-
         }
     }
 }
