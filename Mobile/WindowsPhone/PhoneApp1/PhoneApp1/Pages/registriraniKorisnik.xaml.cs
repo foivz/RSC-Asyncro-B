@@ -39,12 +39,9 @@ namespace PhoneApp1
         private void logout(object sender, EventArgs e)
         {
             accountInfo.Username = "";
-            accountInfo.Id = -1;
             accountInfo.Name = "";
             accountInfo.Password = "";
-            accountInfo.Status = -1;
             accountInfo.Surname = "";
-            accountInfo.Type = -1;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
         private void postaviSucelje()

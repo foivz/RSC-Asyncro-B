@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Net.Http;
 
 namespace PhoneApp1.Pages
 {
@@ -26,9 +27,36 @@ namespace PhoneApp1.Pages
             mail.Click += send;
             ApplicationBar.Buttons.Add(mail);
         }
-        private void send(object sender, EventArgs e)
+        private async void send(object sender, EventArgs e)
         {
+            SetProgress(true);
+            HttpClient client = new HttpClient();
+            var values = new List<KeyValuePair<string, string>>();
+            values.Add(new KeyValuePair<string, string>("email", eMail.Text));
+            values.Add(new KeyValuePair<string, string>("username", userName.Text));
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("http://188.226.168.226/api/forgot.php", content);
+            var responseString = await response.Content.ReadAsStringAsync();
+            SetProgress(false);
+            if (response.StatusCode.ToString() == "OK")
+            {
+                MessageBox.Show("New password was sent to your mail");
+            }
+            else
+            {
+                MessageBox.Show("Error: " + response.StatusCode);
+            }
+        }
+        public void SetProgress(bool value)
+        {
+            if (SystemTray.ProgressIndicator == null)
+            {
+                SystemTray.ProgressIndicator = new ProgressIndicator();
+                SystemTray.ProgressIndicator.Text = "changing password";
+            }
 
+            SystemTray.ProgressIndicator.IsIndeterminate = value;
+            SystemTray.ProgressIndicator.IsVisible = value;
         }
     }
 }

@@ -22,6 +22,11 @@ namespace PhoneApp1
         public MainPage()
         {
             InitializeComponent();
+            accountInfo.Username = "";
+            accountInfo.Name = "";
+            accountInfo.Password = "";
+            accountInfo.Surname = "";
+            pushNotification notifikacije = new pushNotification();
             BuildLocalizedApplicationBar();
         }
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
@@ -82,10 +87,12 @@ namespace PhoneApp1
                         else
                         {
                             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(userData));
-                            //userData odgovor = (userData)serializer.ReadObject(responseString);
                             userData res = JsonConvert.DeserializeObject<userData>(response.Content.ReadAsStringAsync().Result);
                             accountInfo.Name = res.name;
                             accountInfo.Surname = res.surname;
+                            accountInfo.mail = res.email;
+                            accountInfo.Password = res.password;
+                            accountInfo.Username = res.username;
                             NavigationService.Navigate(new Uri("/Pages/registriraniKorisnik.xaml", UriKind.Relative));
                         }
                     }

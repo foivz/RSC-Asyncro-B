@@ -6,14 +6,16 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}" d:DesignWidth="411" Height="190">
+    Foreground="{StaticResource PhoneForegroundBrush}" d:DesignWidth="411" Height="274">
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Tap="LayoutRoot_Tap" Margin="0,0,0,20">
         <Grid Margin="0,0,0,155">
-            <Image x:Name="slika" Source="/Assets/Icons/Check.png" Margin="0,0,0,-60" MaxHeight="60" MaxWidth="411"/>
+            <Image x:Name="slika" Source="/Assets/Icons/Check.png" MaxHeight="60" MaxWidth="411"/>
         </Grid>
-        <TextBlock x:Name="adresa" Text="Adresa 1, 23000 Zadar" Margin="0,82,10,49"/>
-        <TextBlock x:Name="stanjeKrvi" Text="StanjeKrvi" Margin="0,121,10,10"/>
+        <TextBlock x:Name="username" Text="" Margin="0,136,10,93"/>
+        <TextBlock x:Name="adress" Text="" Margin="0,161,10,70"/>
+        <TextBlock x:Name="stored" Text="" Margin="0,189,10,40" />
+        <TextBlock x:Name="capacity" Text="" Margin="0,219,10,10"/>
 
     </Grid>
 </UserControl>

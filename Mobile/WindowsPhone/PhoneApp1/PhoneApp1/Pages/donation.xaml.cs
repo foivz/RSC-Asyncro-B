@@ -10,16 +10,11 @@ using Microsoft.Phone.Shell;
 
 namespace PhoneApp1
 {
-    public partial class donorControl : UserControl
+    public partial class donation : PhoneApplicationPage
     {
-        public donorControl()
+        public donation()
         {
             InitializeComponent();
-        }
-
-        private void LayoutRoot_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            //nesto se dogodi
         }
     }
 }

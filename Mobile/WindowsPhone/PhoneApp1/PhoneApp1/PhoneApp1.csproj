@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JSON\donorJSON.cs" />
     <Compile Include="JSON\LoginForm.cs" />
     <Compile Include="JSON\userData.cs" />
     <Compile Include="LocalizedStrings.cs" />
@@ -106,6 +107,9 @@
     </Compile>
     <Compile Include="Pages\Achievements.xaml.cs">
       <DependentUpon>Achievements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\donation.xaml.cs">
+      <DependentUpon>donation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Donor.xaml.cs">
       <DependentUpon>Donor.xaml</DependentUpon>
@@ -129,6 +133,7 @@
       <DependentUpon>userForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pushNotification.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Achievements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\donation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

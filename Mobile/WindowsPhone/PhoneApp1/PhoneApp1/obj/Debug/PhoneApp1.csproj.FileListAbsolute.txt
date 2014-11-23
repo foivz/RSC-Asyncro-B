@@ -182,3 +182,4 @@ C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bi
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\ICSharpCode.SharpZipLib.WindowsPhone.pdb
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\AmCharts.Windows.QuickCharts.WP.dll
 C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Dragutin\Desktop\AsyncroB\WP\Mobile\WindowsPhone\PhoneApp1\PhoneApp1\obj\Debug\Pages\donation.g.cs
