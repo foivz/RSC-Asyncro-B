@@ -122,82 +122,82 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>hr-HR</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
     <value>Donator</value>
   </data>
   <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
+    <value>dodaj</value>
   </data>
   <data name="AppBarMenuItemText" xml:space="preserve">
     <value>Menu Item</value>
   </data>
   <data name="About" xml:space="preserve">
-    <value>about</value>
+    <value>o aplikaciji</value>
   </data>
   <data name="Achievements" xml:space="preserve">
-    <value>achievements</value>
+    <value>postignuća</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>all</value>
+    <value>sve</value>
   </data>
   <data name="AllowLocation" xml:space="preserve">
-    <value>Allow location usage</value>
+    <value>Dopusti korištenje lokacije</value>
   </data>
   <data name="AllowPush" xml:space="preserve">
-    <value>Allow push notifications</value>
+    <value>Dopusti push notifikacije</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>Confirm password</value>
+    <value>Potvrdi lozinku</value>
   </data>
   <data name="Donate" xml:space="preserve">
-    <value>donate</value>
+    <value>doniraj</value>
   </data>
   <data name="History" xml:space="preserve">
-    <value>history</value>
+    <value>povijest</value>
   </data>
   <data name="ListOfDonors" xml:space="preserve">
-    <value>list of donors</value>
+    <value>lista donora</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>login</value>
+    <value>prijava</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>Ime</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Lozinka</value>
   </data>
   <data name="PasswordReset" xml:space="preserve">
-    <value>password reset</value>
+    <value>izgubljena lozinka</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>settings</value>
+    <value>postavke</value>
   </data>
   <data name="Share" xml:space="preserve">
-    <value>share</value>
+    <value>dijeli</value>
   </data>
   <data name="ShareAchievements" xml:space="preserve">
-    <value>Share your achievements</value>
+    <value>Dijeli postignuća</value>
   </data>
   <data name="ShareFB" xml:space="preserve">
-    <value>Share on Facebook</value>
+    <value>Dijeli na Facebooku</value>
   </data>
   <data name="ShareTW" xml:space="preserve">
-    <value>Share on Twitter</value>
+    <value>Dijeli na Twitteru</value>
   </data>
   <data name="Surname" xml:space="preserve">
-    <value>Surname</value>
+    <value>Prezime</value>
   </data>
   <data name="UseAlarm" xml:space="preserve">
-    <value>Use alarm messaging</value>
-  </data>
-  <data name="userAccount" xml:space="preserve">
-    <value>user account</value>
+    <value>Koristi alarme</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>Username</value>
+    <value>Prezime</value>
+  </data>
+  <data name="userAccount" xml:space="preserve">
+    <value>korisnički račun</value>
   </data>
 </root>

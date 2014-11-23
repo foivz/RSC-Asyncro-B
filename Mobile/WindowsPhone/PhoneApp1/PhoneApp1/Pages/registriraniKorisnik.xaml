@@ -28,6 +28,9 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock x:Name="Naziv" TextWrapping="Wrap" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeLarge}" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="319">
+						<Run Text="{Binding Path=LocalizedResources.Donate, Source={StaticResource LocalizedStrings}}"/>
+            </TextBlock>
 
         </Grid>
     </Grid>

@@ -19,7 +19,7 @@
         <!--Pivot Control-->
         <phone:Pivot Title="Donator">
             <!--Pivot item one-->
-            <phone:PivotItem Header="All">
+            <phone:PivotItem Header="{Binding Path=LocalizedResources.All, Source={StaticResource LocalizedStrings}}">
                 <Grid>
                     <chart:PieChart  
                          x:Name="PieChart"
@@ -32,7 +32,7 @@
             </phone:PivotItem>
 
             <!--Pivot item two-->
-            <phone:PivotItem Header="History">
+            <phone:PivotItem Header="{Binding Path=LocalizedResources.History, Source={StaticResource LocalizedStrings}}">
                 <Grid/>
             </phone:PivotItem>
         </phone:Pivot>

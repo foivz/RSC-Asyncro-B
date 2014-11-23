@@ -23,15 +23,15 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Share" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.Share, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="Share your achievements"/>
-            <toolkit:ToggleSwitch x:Name="facebook" Content="Share on facebook" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
-            <toolkit:ToggleSwitch x:Name="twitter" Content="Share on twitter" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.ShareAchievements, Source={StaticResource LocalizedStrings}}"/>
+            <toolkit:ToggleSwitch x:Name="facebook" Content="{Binding Path=LocalizedResources.ShareFB, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
+            <toolkit:ToggleSwitch x:Name="twitter" Content="{Binding Path=LocalizedResources.ShareTW, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Width="446" Height="112"/>
 
         </Grid>
     </Grid>
